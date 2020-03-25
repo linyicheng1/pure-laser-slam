@@ -25,6 +25,7 @@ namespace laser_slam
             double z = 0.0;
             double w = 0.0;
         };
+    public:
         double time = 0.0;
         LinearAcceleration linear_acceletation;
         AngularVelocity angular_velocity;

@@ -3,7 +3,8 @@
 
 #include <vector>
 #include <string>
-//#include <Geo>
+#include <Geocentric/LocalCartesian.hpp>
+
 namespace laser_slam
 {
     class GNSSData
@@ -19,6 +20,7 @@ namespace laser_slam
         int status;
         int service;
     private:
+        static GeographicLib::LocalCartesian geo_converter;
         static bool origin_position_inited;
     public:
         void InitOriginPosition();

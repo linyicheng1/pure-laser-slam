@@ -12,10 +12,11 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 include_directories(
-        include
         /usr/include/eigen3
         ${PCL_INCLUDE_DIRS}
         ${catkin_INCLUDE_DIRS}
+        thirdPartLib/GeographicLib/include
+        include
 )
 
 add_subdirectory(./ros)
@@ -25,7 +26,7 @@ add_executable(laser_slam Main.cpp)
 
 target_link_libraries(
         laser_slam
-        ${catkin_LIBRARIES}
+        ros
         ${PCL_LIBRARIES}
         libGeographiccc
 )
