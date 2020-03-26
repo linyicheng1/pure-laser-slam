@@ -31,10 +31,10 @@ namespace laser_slam
         AngularVelocity angular_velocity;
         Orientation orientation;
     public:
-        Eigen::Matrix3d GetOrientationMatrix()
+        Eigen::Matrix3f GetOrientationMatrix()
         {
             Eigen::Quaterniond q(orientation.w,orientation.x,orientation.y,orientation.z);
-            Eigen::Matrix3d matrix = q.matrix();
+            Eigen::Matrix3f matrix = q.matrix().cast<float>();
             return matrix;
         }
     };
