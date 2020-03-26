@@ -3,7 +3,7 @@
  */
 #ifndef __CLOUD_SUB_H
 #define __CLOUD_SUB_H
-#include <#include <deque>
+#include <deque>
 
 #include <ros/ros.h>
 #include <sensor_msgs/PointCloud2.h>
