@@ -11,7 +11,7 @@ namespace laser_slam
         geo_converter.Reset(latitude,longitude,altitude);
         origin_position_inited = true;
     }
-    void GNSSData::updateXYZ()
+    void GNSSData::UpdateXYZ()
     {
         if(!origin_position_inited)
         {

@@ -22,12 +22,14 @@ include_directories(
 
 add_subdirectory(./ros)
 add_subdirectory(./thirdPartLib)
+add_subdirectory(./front_end)
 
 add_executable(laser_slam Main.cpp)
 
 target_link_libraries(
         laser_slam
         ros
+        front_end
         ${PCL_LIBRARIES}
         libGeographiccc
 )

@@ -24,7 +24,7 @@ namespace laser_slam
         static bool origin_position_inited;
     public:
         void InitOriginPosition();
-        void updateXYZ();
+        void UpdateXYZ();
     };
 }
 #endif
